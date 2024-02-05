@@ -1,0 +1,26 @@
+
+
+
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+Tue Jan 30 02:01:23 AM EET 2024
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+WARNING! stowing . would cause conflicts:
+  * existing target is neither a link nor a directory: .my-nerd-font-symbols.odt
+All operations aborted.
+
+
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+Tue Jan 30 02:07:52 AM EET 2024
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+WARNING! stowing . would cause conflicts:
+  * existing target is not owned by stow: .Xresources
+  * existing target is not owned by stow: .config/bspwm
+  * existing target is not owned by stow: .config/copyq
+  * existing target is not owned by stow: .config/picom
+  * existing target is not owned by stow: .config/polybar
+  * existing target is not owned by stow: .config/scripts
+  * existing target is not owned by stow: .config/ulauncher
+  * existing target is not owned by stow: .my-nerd-font-symbols.odt
+  * existing target is not owned by stow: .my_aliases
+  * existing target is not owned by stow: .zshrc
+All operations aborted.

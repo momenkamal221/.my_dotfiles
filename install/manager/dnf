@@ -1,0 +1,76 @@
+#!/bin/bash
+
+sddm
+bspwm
+xhost
+numlockx #to control the numlock key
+sxhkd
+# trayer # changed with a new tray in polybar
+polybar
+dmenu
+picom
+feh
+alsa-utils
+alsa-lib
+pulseaudio-utils
+pavucontrol
+polkit-gnome
+gnome-keyring
+playerctl
+xdotool
+zsh
+
+# #some themes
+# breeze-cursor-theme
+# adapta-gtk-theme
+# papirus-icon-theme
+# materia-gtk-theme
+# materia-kde
+# oxygen-cursor-theme
+# oxygen-cursor-theme-extra
+# comixcursors-righthanded-opaque
+# comixcursors-righthanded
+# crystalcursors
+# dmz-cursor-theme
+# phinger-cursor-theme
+# gnome-themes-extra
+# adwaita-qt5
+# adwaita-gtk3-theme
+# #themes end
+
+seahorse #facilitates the management of GPG keys
+langpacks-ar
+language-pack-ar-base
+stow
+timeshift
+ntpsec
+konsole5
+dunst
+lxappearance
+qt5ct
+kvantum
+dolphin
+libva-nvidia-driver #for Hardware acceleration it has this name nvidia-vaapi-driver
+ark #archive manager work well with dolphin
+flameshot
+kwrite
+python3-devel gcc #to install pynput
+easyeffects
+bleachbit
+copyq
+git
+neofetch
+vlc
+mpv
+qbittorrent
+thunderbird
+ulauncher
+gimp
+inkscape
+krita
+shotwell
+qalculate-gtk
+#kde-partitionmanager
+obs-studio
+gnome-disk-utility
+

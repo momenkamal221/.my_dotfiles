@@ -1,0 +1,5 @@
+/install/logs/*
+/.config/copyq/copyq_tab.*\.dat
+/.config/copyq/copyq_tab*.dat
+/.config/copyq/copyq.lock
+/.config/copyq/copyq.pub

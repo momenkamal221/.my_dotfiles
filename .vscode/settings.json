@@ -1,0 +1,11 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".*",
+        "cmd": "~/.dotfiles/.stow.sh >> ~/.dotfiles/.stow-log"
+      }
+    ]
+  }
+}
+

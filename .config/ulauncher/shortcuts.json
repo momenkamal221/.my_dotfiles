@@ -1,0 +1,62 @@
+{
+    "6660d055-f8e6-44c4-8509-2bb78ffb9549": {
+        "id": "6660d055-f8e6-44c4-8509-2bb78ffb9549",
+        "name": "Google Search",
+        "keyword": "g",
+        "cmd": "https://google.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/google-search-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1705434415.7919602
+    },
+    "7ce22d15-7516-4ad4-a537-3750dda14782": {
+        "id": "7ce22d15-7516-4ad4-a537-3750dda14782",
+        "name": "Stack Overflow",
+        "keyword": "so",
+        "cmd": "https://stackoverflow.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1705434415.7920058
+    },
+    "0cd32416-fcf9-401c-9116-2d7999d1d058": {
+        "id": "0cd32416-fcf9-401c-9116-2d7999d1d058",
+        "name": "Wikipedia",
+        "keyword": "wiki",
+        "cmd": "https://en.wikipedia.org/wiki/%s",
+        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1705434415.7920415
+    },
+    "3c0c96a1-8372-40f3-828d-f4fd5f4b6cee": {
+        "id": "3c0c96a1-8372-40f3-828d-f4fd5f4b6cee",
+        "name": "logout",
+        "keyword": "logout",
+        "cmd": "killall bspwm",
+        "icon": "~/.icons/logout.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1705547086.947858
+    },
+    "3de4de64-15c6-42a9-8fbd-14c50f1e5445": {
+        "id": "3de4de64-15c6-42a9-8fbd-14c50f1e5445",
+        "name": "shutdown",
+        "keyword": "shutdown",
+        "cmd": "systemctl poweroff",
+        "icon": "~/.icons/shutdown.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1705547124.0621197
+    },
+    "d759416c-7b02-47c9-bf5b-f185ded2e752": {
+        "id": "d759416c-7b02-47c9-bf5b-f185ded2e752",
+        "name": "reboot",
+        "keyword": "reboot",
+        "cmd": "systemctl reboot",
+        "icon": "~/.icons/reboot.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1705547618.903352
+    }
+}
