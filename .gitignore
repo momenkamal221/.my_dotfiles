@@ -3,3 +3,4 @@
 /.config/copyq/copyq_tab*.dat
 /.config/copyq/copyq.lock
 /.config/copyq/copyq.pub
+**/__pycache__/

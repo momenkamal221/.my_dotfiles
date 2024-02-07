@@ -1,0 +1,15 @@
+#!/bin/bash
+
+xampp=/opt/lampp/manager-linux-x64.run
+
+# Ask for the root password
+echo -n "password: "
+read -s ROOT_PASSWORD
+echo
+
+# Use sudo to run the command with root privileges and handle incorrect password
+if echo $ROOT_PASSWORD | sudo -S true > /dev/null 2>&1; then
+    nohup sudo $xampp > /dev/null 2>&1 &
+else
+    echo "Incorrect password"
+fi

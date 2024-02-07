@@ -66,18 +66,17 @@ bspc rule -a Screenkey manage=off
 # ##############################################################################
 #bspwm
 pgrep -x sxhkd > /dev/null || sxhkd -c $bspwm_configs/sxhkdrc &
-picom --config $picom &
-
+picom --experimental-backends --config $picom &
 # pgrep -x polybar > /dev/null || polybar mybar --config=$polybar &
-
-xfce4-panel --disable-wm-check&
-feh --bg-fill --randomize $HOME/.wallpapers/* &
+xfce4-panel --disable-wm-check &
+# feh --bg-fill --randomize $HOME/.wallpapers/* &
+nitrogen --random --restore &
 playerctld daemon &
 #in fedora /usr/libexec/polkit-gnome-authentication-agent-1
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 #preferences
-timedatectl set-timezone Africa/Cairo
-xsetroot -cursor_name left_ptr #for cursor theme
+timedatectl set-timezone Africa/Cairo &
+xsetroot -cursor_name left_ptr & #for cursor theme
 numlockx on & #to launch with numlock on
 setxkbmap -layout 'us,ara' -option 'grp:alt_shift_toggle' &
 #apps(Regular Task Apps)

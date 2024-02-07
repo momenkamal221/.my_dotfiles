@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+#this script will run discord the flatpak installation
+import sys
+import subprocess
+appID='com.discordapp.Discord'
+args=["flatpak" ,"run",appID]+[arg for index, arg in enumerate(sys.argv) if index!=0]
+subprocess.run(args)

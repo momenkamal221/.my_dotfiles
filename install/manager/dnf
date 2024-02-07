@@ -9,7 +9,8 @@ sxhkd
 polybar
 dmenu
 picom
-feh
+#feh
+nitrogen
 alsa-utils
 alsa-lib
 pulseaudio-utils

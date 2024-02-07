@@ -51,6 +51,10 @@ run_scripts("flatpak")
 flatpak_install(*get_names(f"{manager_dir}/flatpak"))
 ###
 copy_file(f"{current_path}/files/50-mouse-acceleration.conf",'/etc/X11/xorg.conf.d/50-mouse-acceleration.conf')
+### files that has to be executable
+execute_command('chmod +x ~/.config/scripts/*')
+execute_command('chmod +x ~/.config/bspwm/*')
+execute_command('chmod +x ~/bin/*')
 
 
 
