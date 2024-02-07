@@ -21,7 +21,7 @@ gnome-keyring
 playerctl
 xdotool
 zsh
-
+flatpak
 # #some themes
 # breeze-cursor-theme
 # adapta-gtk-theme
@@ -42,7 +42,6 @@ zsh
 
 seahorse #facilitates the management of GPG keys
 langpacks-ar
-language-pack-ar-base
 stow
 timeshift
 ntpsec

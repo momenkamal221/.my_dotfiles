@@ -1,3 +1,5 @@
+#first install git and tmux
+#use tmux so you can scroll using ctrl-b then Page Up and Page Down keys - press q to exit the scroll mode
 import os
 import configparser
 from helpers import (
