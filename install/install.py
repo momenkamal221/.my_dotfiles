@@ -58,6 +58,7 @@ execute_command('chmod +x ~/.config/scripts/*')
 execute_command('chmod +x ~/.config/bspwm/*')
 execute_command('chmod +x ~/bin/*')
 
-
+#scripts wait for some user input
+run_scripts('oh-my-zsh')
 
 
