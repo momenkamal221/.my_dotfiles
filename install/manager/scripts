@@ -6,4 +6,4 @@ codecs
 microsoft-fonts
 bsp-layout
 system
-nvidia-drivers #this one has to be done hafter installing rpm fusion 
+nvidia-drivers #this one has to be done after installing rpm fusion 
