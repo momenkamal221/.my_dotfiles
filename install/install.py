@@ -36,8 +36,10 @@ manager_dir=f"{current_path}/manager"
 #write the new changes to dnf.conf
 with open(dnfconfig_path, 'w') as configfile:
     dnfconfig.write(configfile)
+# configuring dnf done
+
 ###
-run_scripts('rpm-fusion')
+run_scripts('rpm-fusion') # it has to be done before anything cuz some installs depends on it
 ###
 refresh_dnf()
 ###
