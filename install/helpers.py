@@ -86,6 +86,24 @@ def send_operation_end(operation_message_length):
     sys.stdout.write("\r")
     sys.stdout.flush()
 
+def remove_packages(*packages):
+    operation = 'remove'
+    for package in packages:
+        operation_message_length=send_operation_started(operation,f'{package}: removeing...')
+        # Check if the package is already removed
+        if not dnf.is_installed(package):
+            send_operation_end(operation_message_length)
+            log(operation, f"{package}: already not installed.",
+                "success", log_file_path)
+            continue
+        # remove the package
+        is_package_removed=dnf.remove(package)
+        send_operation_end(operation_message_length)
+        if is_package_removed:
+            log(operation,f'{package}: successfully removed',"success",log_file_path)
+        else:
+            log(operation,f'{package}: failed to remove',"error",log_file_path)
+
 def install_packages(*packages):
     operation = 'install'
     for package in packages:

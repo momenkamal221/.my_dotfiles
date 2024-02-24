@@ -2,16 +2,25 @@
 
 sddm
 bspwm
+i3lock 
+xset 
+xautolock
 xhost
 numlockx #to control the numlock key
 sxhkd
 # trayer # changed with a new tray in polybar
-polybar
+# polybar
+
 xfce4-panel
+xfce4-notifyd
+xfce4-xkb-plugin
+
+
 dmenu
 picom
-#feh
-nitrogen
+feh
+xsetroot #the command that apply cursor theme in bspwmrc
+# nitrogen
 alsa-utils
 alsa-lib
 pulseaudio-utils
@@ -22,23 +31,24 @@ playerctl
 xdotool
 zsh
 flatpak
-# #some themes
-# breeze-cursor-theme
-# adapta-gtk-theme
-# papirus-icon-theme
-# materia-gtk-theme
-# materia-kde
-# oxygen-cursor-theme
-# oxygen-cursor-theme-extra
-# comixcursors-righthanded-opaque
-# comixcursors-righthanded
-# crystalcursors
-# dmz-cursor-theme
-# phinger-cursor-theme
-# gnome-themes-extra
-# adwaita-qt5
-# adwaita-gtk3-theme
+
+#themes
+adwaita-qt5
+adwaita-qt6
+arc-theme
+materia-kde
+materia-gtk-theme
+breeze-cursor-theme
+papirus-icon-theme
+oxygen-cursor-theme
+lxappearance
+qt5ct
+kvantum
 # #themes end
+
+
+
+
 
 seahorse #facilitates the management of GPG keys
 langpacks-ar
@@ -47,9 +57,7 @@ timeshift
 ntpsec
 konsole5
 dunst
-lxappearance
-qt5ct
-kvantum
+
 dolphin
 ark #archive manager work well with dolphin
 flameshot
@@ -73,4 +81,5 @@ qalculate-gtk
 #kde-partitionmanager
 obs-studio
 gnome-disk-utility
-
+sysmontask
+htop

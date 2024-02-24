@@ -36,3 +36,15 @@ def update():
 def clear_cache():
     cmd="dnf clean all"
     execute_command(cmd)
+def database_update():
+    database_update_cmd = f"dnf makecache --refresh"
+    database_update = execute_command(database_update_cmd)
+    #check-update returncode is the number the available updates
+    return database_update.returncode
+def remove(package):
+    # Install the package
+    remove_cmd = f"dnf remove -y {package}"
+    remove_result = execute_command(remove_cmd)
+    if remove_result.returncode == 0:
+        return True
+    return False

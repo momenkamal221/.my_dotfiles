@@ -1,0 +1,92 @@
+#!/bin/bash
+#! note if the cmmand have more that one argument then you need to put it between ""
+#this scirpt is made for the scripts that run in the background with infinite loop
+#you can you use it with anything but it can affect the performance
+#the reason why i made it to because when i refresh my wm the script with infinity loop runs seviral times and this way "pgrep -x sxhkd > /dev/null || sxhkd -c &" doesn't work for this kind of scripts
+#so if the app can handle the issue and doen't open twice by its nature then dont use exec-once
+#and if you can use this method "pgrep -x sxhkd > /dev/null || sxhkd -c &" use it
+CMD=$1
+LOCKFILE_PATH_NAME=$(basename "$1")
+KILL_PNAME=$2
+LOCKFILE_PATH=~/.lockfiles/$LOCKFILE_PATH_NAME.lock
+
+cmd_already_running() {
+    echo "Another instance of the script is already running. Exiting."
+    exit 1
+}
+cleanup() {
+    rm -f "$LOCKFILE_PATH"
+}
+extract_arguments_return=""
+extract_arguments() {
+    if [[ $1 =~ exec-once.sh ]]; then
+        # Extract the substring after "exec-once.sh "
+        extract_arguments_return="${1#*exec-once.sh }"
+    fi
+}
+parent_killer(){
+	while [ -e "$LOCKFILE_PATH" ]
+	do
+  	sleep 1  # You can adjust the sleep time as needed
+	done
+	if [ ! -z "$2" ]; then
+		pkill -TERM $2
+	else
+
+		pkill -TERM -P $1
+	fi
+}
+
+
+#current script info
+CURRENT_PID=$$
+CURRENT_CMD=$(ps -p $$ -o cmd --no-headers) 
+
+
+if [ ! -d "~/.lockfiles" ]; then
+    mkdir -p ~/.lockfiles
+fi
+
+# touch "$LOCKFILE_PATH"
+#check if LOCKFILE_PATH exits or not
+
+if [ -f "$LOCKFILE_PATH" ]; then
+	LOCKFILE_PID=$(cut -d ':' -f 1 "$LOCKFILE_PATH")
+	LOCKFILE_CMD=$(ps -p $LOCKFILE_PID -o cmd --no-headers)
+	
+
+	extract_arguments "$LOCKFILE_CMD"
+	LOCKFILE_CMD=$extract_arguments_return
+	extract_arguments "$CURRENT_CMD"
+	CURRENT_CMD=$extract_arguments_return
+
+
+	if [[ "$LOCKFILE_CMD" = "$CURRENT_CMD" ]]; then
+		cmd_already_running
+	else #  cmd inside the lockfile "LOCKFILE_CMD" is not CURRENT_CMD
+		cleanup
+	fi
+fi
+echo "$CURRENT_PID":"$CURRENT_CMD" > "$LOCKFILE_PATH"
+
+# trap command
+# SIGINT (2) - Interrupt
+# SIGQUIT (3) - Quit
+# SIGABRT (6) - Cancel
+# SIGTERM (15) - Terminate
+# SIGCONT (18) - pause
+
+
+trap "cleanup; exit" 15
+trap "cleanup; exit" 3
+trap "cleanup; exit" 2
+trap "cleanup; exit" 0
+
+# $PID=$!
+# wait $PID
+parent_killer $CURRENT_PID $KILL_PNAME & 
+
+$CMD
+
+
+

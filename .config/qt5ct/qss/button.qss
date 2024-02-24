@@ -1,0 +1,4 @@
+/* Regular scales for QPushButton */
+QPushButton {
+    padding: 2px 4px;
+}

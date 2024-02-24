@@ -1,13 +1,12 @@
 #! /bin/sh
 bspc rule -r "*" # will reset all rules to configure them again
+
 # ##############################################################################
 # #                                  ENV VARS                                  # 
 # ##############################################################################
 export QT_QPA_PLATFORMTHEME=qt5ct
 export XCURSOR_SIZE=24
-# export XCURSOR_THEME=Simp1e-Mix-Light
 export XCURSOR_THEME=Breeze_Snow
-# export XCURSOR_PATH=${XCURSOR_PATH}:~/.local/share/icons
 
 # ##############################################################################
 # #                                  VARS                                      # 
@@ -16,14 +15,15 @@ export XCURSOR_THEME=Breeze_Snow
 export bspwm_configs=$HOME/.config/bspwm
 export configs=$HOME/.config
 export scripts=$configs/scripts
+export wallpaper=$HOME/.wallpapers/39-night.jpeg
 picom=$configs/picom/picom.conf
 polybar=$configs/polybar/config.ini
-
-
+lock_screen_after=10 #in minutes
+save_screen_after=$((120*60)) #in seconds
 # ##############################################################################
 # #                                  CONFIGS                                   # 
 # ##############################################################################
-bspc monitor -d 1 2 3 4 5 6 7 8 9
+bspc monitor -d 1 2 3 4 5 6 7 8 9 '`'
 
 
 bspc config focus_follows_pointer true
@@ -60,54 +60,64 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 
+run_if_not_found() {
+    # Check if the process with the specified name is running
+    pgrep -x "$1" > /dev/null || {
+        # If the process is not found, execute the provided command
+        eval "$2"
+    } &
+}
 
 # ##############################################################################
 # #                            INITIAT ENVIRONMENT                             # 
 # ##############################################################################
 #bspwm
-pgrep -x sxhkd > /dev/null || sxhkd -c $bspwm_configs/sxhkdrc &
-picom --experimental-backends --config $picom &
+# pgrep -x sxhkd > /dev/null || sxhkd -c $bspwm_configs/sxhkdrc &
+run_if_not_found "sxhkd" "sxhkd -c $bspwm_configs/sxhkdrc" &
+run_if_not_found "picom" "--config $picom" &
+xautolock -time $lock_screen_after -locker $bspwm_configs/lockscreen.sh &
+xset s $save_screen_after &
+picom --config $picom & #--experimental-backends 
 # pgrep -x polybar > /dev/null || polybar mybar --config=$polybar &
 xfce4-panel --disable-wm-check &
-# feh --bg-fill --randomize $HOME/.wallpapers/* &
-nitrogen --random --restore &
+/usr/lib64/xfce4/notifyd/xfce4-notifyd & #notfication xfce
+feh --bg-fill $wallpaper &
+# nitrogen --random --restore &
 playerctld daemon &
-#in fedora /usr/libexec/polkit-gnome-authentication-agent-1
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+/usr/libexec/polkit-gnome-authentication-agent-1 &
 #preferences
 timedatectl set-timezone Africa/Cairo &
 xsetroot -cursor_name left_ptr & #for cursor theme
 numlockx on & #to launch with numlock on
-setxkbmap -layout 'us,ara' -option 'grp:alt_shift_toggle' &
+setxkbmap -layout 'us,eg' -option 'grp:alt_shift_toggle' &
 #apps(Regular Task Apps)
-ulauncher --no-window-shadow --hide-window &
+run_if_not_found ulauncher "ulauncher --no-window-shadow --hide-window" &
 dolphin --daemon &
 copyq &
 flameshot &
 #scripts
-$scripts/input-vol-blocker.sh &
+exec-once $scripts/input-vol-blocker.sh &
 
 # ##############################################################################
 # #                                  Auto Start                                # 
 # ##############################################################################
 #for the apps that has window that pop up into my face
-discord &
 
-
+# exec-once "flatrun discord" "Discord"  &
+run_if_not_found Discord "flatrun discord" 
 
 # ##############################################################################
 # #                                  THEME                                     # 
 # ##############################################################################
 
-bspc config border_width         2
-gap=5
-bspc config window_gap $gap
-bspc config top_padding 20
-# bspc config left_padding -$gap
-# bspc config right_padding -$gap
-# bspc config bottom_padding -$gap
+bspc config window_gap 5
+# bspc config top_padding 20
 
-#coloring
-bspc config active_border_color '#333333'
-bspc config normal_border_color '#333333'
-bspc config focused_border_color '#3465a4'
+#border
+# bspc config border_width         2
+
+bspc config active_border_color '#666666'
+bspc config normal_border_color '#666666'
+bspc config focused_border_color '#5294e2'
+
+$bspwm_configs/frame_decorations.sh stay

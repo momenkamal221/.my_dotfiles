@@ -8,23 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# POWERLEVEL9K_DISABLE_RPROMPT=true
-# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-# POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="==> "
-# POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-
-POWERLEVEL9K_CUSTOM_FEDORA_ICON="echo -e ''"
-
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
-POWERLEVEL9K_SHORTEN_DELIMITER='~'
-
-# ZSH_THEME="powerlevel9k/powerlevel9k"
-ZSH_THEME=powerlevel10k/powerlevel10k
-POWERLEVEL9K_MODE="nerdfont-complete"
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_fedora_icon user dir_writable dir vcs status)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -87,13 +71,41 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-git
-dnf
-zsh-autosuggestions
-zsh-syntax-highlighting
-)
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+	git
+	git-prompt
+	gitfast
+	dnf # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dnf
+	zsh-autosuggestions 
+	zsh-syntax-highlighting
+	zsh-interactive-cd 
+	dirhistory # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dirhistory
+	sudo #esc esc to use sudo for the last command or the command you already wrote
+	web-search # to see Available search contexts are: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search 
+	jsontools #https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jsontools
+	)
 
+source $ZSH/oh-my-zsh.sh
+
+#theme
+source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+ZSH_THEME="powerlevel10k/powerlevel10k"
+# POWERLEVEL9K_DISABLE_RPROMPT=true
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="==> "
+# POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+
+POWERLEVEL9K_CUSTOM_FEDORA_ICON="echo -e ''"
+
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
+POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
+POWERLEVEL9K_SHORTEN_DELIMITER='~'
+
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME=powerlevel10k/powerlevel10k
+POWERLEVEL9K_MODE="nerdfont-complete"
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_fedora_icon user dir_writable dir vcs status)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 
 # User configuration
 
@@ -120,9 +132,12 @@ zsh-syntax-highlighting
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source $ZSH/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 SAVEHIST=2000  # Save most-recent 1000 lines
 HISTFILE=~/.zsh_history
 source ~/.my_aliases
 
+autoload -U compinit
+compinit

@@ -1,0 +1,87 @@
+
+QMenu{
+padding: 0px;
+}
+QMenu::item {
+padding:1px 4px;
+spacing: 0px;/* spacing between menu bar items */
+margin: 0px; 
+}
+QMenu::icon {
+padding-left:10px;
+}
+
+QMenu::item:selected {
+    background-color: #5294e2;
+}
+
+QMenu::separator {
+    height: 1px; /* Set separator height */
+    background-color: #ccc; /* Set separator color */
+    margin: 2px 0; /* Add margin */
+}
+QMenu::indicator{
+padding-left:10px;
+}
+/* Style for checkboxes */
+QMenu::indicator:non-exclusive {
+    image: url("/usr/share/themes/Arc-Dark/gtk-2.0/assets/menu-checkbox-unchecked.png"); /* Replace with your unchecked icon */
+}
+QMenu::indicator:non-exclusive:disabled{
+    image: url("/usr/share/themes/Arc-Dark/gtk-2.0/assets/menu-checkbox-unchecked-insensitive.png"); /* Replace with your unchecked icon */
+}
+QMenu::indicator:non-exclusive:selected {
+    image: url("/usr/share/themes/Arc-Dark/gtk-2.0/assets/menu-checkbox-unchecked-selected.png"); /* Replace with your unchecked icon */
+}
+
+QMenu::indicator:non-exclusive:checked {
+    image: url("/usr/share/themes/Arc-Dark/gtk-2.0/assets/menu-checkbox-checked.png"); /* Replace with your checked icon */
+}
+QMenu::indicator:non-exclusive:checked:disabled {
+    image: url("/usr/share/themes/Arc-Dark/gtk-2.0/assets/menu-checkbox-checked-insensitive.png"); /* Replace with your checked icon */
+}
+QMenu::indicator:non-exclusive:checked:selected{
+    image: url("/usr/share/themes/Arc-Dark/gtk-2.0/assets/menu-checkbox-checked-selected.png"); /* Replace with your checked icon */
+}
+
+
+/* Style for radios */
+QMenu::indicator:exclusive {
+    image: url("/usr/share/themes/Arc-Dark/gtk-2.0/assets/menu-radio-unchecked.png"); /* Replace with your unchecked icon */
+}
+QMenu::indicator:exclusive:disabled {
+    image: url("/usr/share/themes/Arc-Dark/gtk-2.0/assets/menu-radio-unchecked-insensitive.png"); /* Replace with your unchecked icon */
+}
+QMenu::indicator:exclusive:selected {
+    image: url("/usr/share/themes/Arc-Dark/gtk-2.0/assets/menu-radio-unchecked-selected.png"); /* Replace with your unchecked icon */
+}
+
+QMenu::indicator:exclusive:checked {
+    image: url("/usr/share/themes/Arc-Dark/gtk-2.0/assets/menu-radio-checked.png"); /* Replace with your checked icon */
+}
+QMenu::indicator:exclusive:checked:disabled {
+    image: url("/usr/share/themes/Arc-Dark/gtk-2.0/assets/menu-radio-checked-insensitive.png"); /* Replace with your checked icon */
+}
+QMenu::indicator:exclusive:checked:selected{
+    image: url("/usr/share/themes/Arc-Dark/gtk-2.0/assets/menu-radio-checked-selected.png"); /* Replace with your checked icon */
+}
+/*==============menubar==============*/
+QMenuBar {
+    background-color: #393B4B;
+}
+QMenuBar::item {
+    spacing: 3px;           
+    padding: 0 8px;
+    border-radius: 0px;
+background-color:#393B4B;
+}
+QMenuBar::item:selected {    
+    background-color: #5294e2;
+}
+QMenuBar::item:pressed {
+    background: #5294e2;
+}
+
+
+
+

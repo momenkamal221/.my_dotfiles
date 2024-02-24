@@ -2,6 +2,7 @@
 #use tmux so you can scroll using ctrl-b then Page Up and Page Down keys - press q to exit the scroll mode
 import os
 import configparser
+import dnf
 from helpers import (
     install_packages,
     flatpak_install,
@@ -11,13 +12,16 @@ from helpers import (
     current_path,
     refresh_dnf,
     update_system,
-    copy_file
+    copy_file,
+    remove_packages
 )
 
 # # making sure script is running with sudo
 if os.geteuid() != 0:
     print("This script requires sudo privileges.")
     exit()
+
+execute_command('mkdir ~/.config')
 
 ### add my dot files
 install_packages('stow')
@@ -53,8 +57,12 @@ run_scripts(*get_names(f"{manager_dir}/scripts"))
 ###
 run_scripts("flatpak")
 flatpak_install(*get_names(f"{manager_dir}/flatpak"))
-###
-copy_file(f"{current_path}/files/50-mouse-acceleration.conf",'/etc/X11/xorg.conf.d/50-mouse-acceleration.conf')
+###======================settings=============================
+#mouse acc
+copy_file(
+    f"{current_path}/files/50-mouse-acceleration.conf",
+    "/etc/X11/xorg.conf.d/50-mouse-acceleration.conf"
+    )
 ### files that has to be executable
 execute_command('chmod +x ~/.config/scripts/*')
 execute_command('chmod +x ~/.config/bspwm/*')

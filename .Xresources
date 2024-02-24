@@ -1,2 +1,4 @@
 Xcursor.theme: Breeze_Snow
 Xcursor.size: 24
+#To disable middle-click to copy
+URxvt*selectToClipboard: false

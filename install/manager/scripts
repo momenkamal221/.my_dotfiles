@@ -4,5 +4,5 @@ code
 codecs
 microsoft-fonts
 bsp-layout
-system
 nvidia-drivers #this one has to be done after installing rpm fusion 
+system #system and settings

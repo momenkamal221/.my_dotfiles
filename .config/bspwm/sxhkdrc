@@ -6,8 +6,6 @@
 
 super + Return
 	konsole
-super + grave
-	konsole
 # file manager
 super + e
 	dolphin
@@ -47,9 +45,9 @@ super + n
 super + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
-# swap the current node and the biggest window
+# swap the current node and the biggest window in the current desktop
 super + g
-	bspc node -s biggest.window
+	bspc node -s biggest.window.local
 
 #
 # state/flags
@@ -73,7 +71,7 @@ super + f
 
 # set the node flags
 super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+	bspc node -g {marked,locked,sticky,private} #locked-> cant be closed;sticky-> follow the active workspace;
 
 #
 # focus/swap
@@ -91,7 +89,7 @@ super + {p,b,comma,period}
 # super + {_,shift + }c
 # 	bspc node -f {next,prev}.local.!hidden.window
 #to conceal or hide a window
-super + c
+
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
@@ -105,9 +103,13 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}' --follow
-
+super + {_,shift + }{1-9}
+	bspc {desktop -f,node -d} '^{1-9}' --follow
+#for desktop '`' which i use as a way to hide windows
+super + c
+	bspc node -d '^10'
+super  + {_,shift + } grave
+	bspc {desktop -f,node -d} '^10'
 #
 # preselect
 #
@@ -159,3 +161,29 @@ super + shift + m
 super + m
 	kdocker
 	# bspc node -g hidden=off
+
+Print
+	flameshot full -c
+
+super + Tab
+	$bspwm_configs/next_occupied_desktop.sh
+super + d
+  $bspwm_configs/frame_decorations.sh toggle
+
+alt + button4
+	 $bspwm_configs/volume.sh up
+alt + button5
+	 $bspwm_configs/volume.sh down
+
+alt + button2
+	$bspwm_configs/toggle_mute.sh
+alt + space
+	playerctl play-pause
+
+super + ctrl + Escape
+	$bspwm_configs/lockscreen.sh
+super + a
+	$bspwm_configs/scrolling.sh 1
+super + shift + a
+	$bspwm_configs/scrolling.sh 0
+
