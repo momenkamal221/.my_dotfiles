@@ -13,7 +13,8 @@ from helpers import (
     refresh_dnf,
     update_system,
     copy_file,
-    remove_packages
+    remove_packages,
+    manager_dir
 )
 
 # # making sure script is running with sudo
@@ -21,14 +22,14 @@ if os.geteuid() != 0:
     print("This script requires sudo privileges.")
     exit()
 
+
 execute_command('mkdir ~/.config')
 
-### add my dot files
-install_packages('stow')
-execute_command('stow --adopt -d ~/.my_dotfiles -t ~/ .')
+
 ###
 #configure dnf
 dnfconfig = configparser.ConfigParser()
+dnfconfig.optionxform = str
 dnfconfig_path="/etc/dnf/dnf.conf"
 dnfconfig.read(dnfconfig_path)
 
@@ -36,16 +37,15 @@ dnfconfig['main']['fastestmirror']="True"
 dnfconfig['main']['max_parallel_downloads']="10"
 dnfconfig['main']['defaultyes']="True"
 dnfconfig['main']['keepcache']="True"
-
-manager_dir=f"{current_path}/manager"
-
 #write the new changes to dnf.conf
 with open(dnfconfig_path, 'w') as configfile:
     dnfconfig.write(configfile)
 # configuring dnf done
 
+
+
 ###
-run_scripts('rpm-fusion') # it has to be done before anything cuz some installs depends on it
+run_scripts('rpm-fusion') # it has to be done before installing anything cuz some installs depends on it
 ###
 refresh_dnf()
 ###
@@ -67,6 +67,19 @@ copy_file(
 execute_command('chmod +x ~/.config/scripts/*')
 execute_command('chmod +x ~/.config/bspwm/*')
 execute_command('chmod +x ~/bin/*')
+
+
+# configure sddm
+sddm_config = configparser.ConfigParser()
+sddm_config.optionxform = str
+sddm_config_path="/etc/sddm.conf"
+sddm_config.read(sddm_config_path)
+sddm_config['General']['Numlock']="on"
+sddm_config['Theme']['Current']="materia-dark"
+#write the new changes to sddm.conf
+with open(sddm_config_path, 'w') as configfile:
+    sddm_config.write(configfile)
+# configuring sddm done
 
 #scripts wait for some user input
 run_scripts('oh-my-zsh')

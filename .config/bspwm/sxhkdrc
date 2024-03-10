@@ -171,19 +171,19 @@ super + d
   $bspwm_configs/frame_decorations.sh toggle
 
 alt + button4
-	 $bspwm_configs/volume.sh up
+	 $scripts/volume.sh up
 alt + button5
-	 $bspwm_configs/volume.sh down
+	 $scripts/volume.sh down
 
 alt + button2
-	$bspwm_configs/toggle_mute.sh
+	$scripts/toggle_mute.sh
 alt + space
 	playerctl play-pause
 
 super + ctrl + Escape
-	$bspwm_configs/lockscreen.sh
+	$scripts/lockscreen.sh
 super + a
-	$bspwm_configs/scrolling.sh 1
+	$scripts/scrolling.sh 1
 super + shift + a
-	$bspwm_configs/scrolling.sh 0
+	$scripts/scrolling.sh 0
 

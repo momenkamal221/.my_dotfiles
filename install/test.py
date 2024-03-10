@@ -1,3 +1,6 @@
-import os
+import time
 import helpers
-helpers.install_packages('flat-remix-gtk3-theme')
+import os
+import datetime
+
+helpers.refresh_dnf()

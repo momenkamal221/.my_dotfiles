@@ -36,4 +36,4 @@ elif [ $1 == "down" ]; then
 	vol_amount="-$vol%"
 fi
 pactl set-sink-volume @DEFAULT_SINK@ "$vol_amount"
-play $bspwm_configs/audio-volume-change.oga &
+play $scripts/audio-volume-change.oga &

@@ -3,7 +3,8 @@ import sys
 import subprocess
 apps=[
 	['brave','com.brave.Browser'],
-    ['discord','com.discordapp.Discord']
+    ['discord','com.discordapp.Discord'],
+    ['spotify','com.spotify.Client']
 	]
 for app in apps:
     if sys.argv[1] in app:
