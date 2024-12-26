@@ -1,0 +1,3 @@
+>>> stow --adopt -d ~/.my_dotfiles -t ~/ .
+stow: --dir value '/root/.my_dotfiles' is not a valid directory
+

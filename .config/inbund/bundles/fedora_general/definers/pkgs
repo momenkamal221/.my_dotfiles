@@ -1,0 +1,36 @@
+#! /bin/bash	
+seahorse #facilitates the management of GPG keys
+langpacks-ar
+timeshift
+ntpsec
+dunst
+gnome-software
+dolphin
+ark #archive manager work well with dolphin
+flameshot
+kwrite
+python3-devel gcc #to install pynput
+pytest
+easyeffects
+bleachbit
+copyq
+git
+neofetch
+vlc
+mpv
+qbittorrent
+thunderbird
+ulauncher
+gimp
+inkscape
+krita
+shotwell
+qalculate-gtk
+#kde-partitionmanager
+obs-studio
+gnome-disk-utility
+sysmontask
+htop
+hplip hplip-gui cups #for printing
+trash-cli
+xournalpp

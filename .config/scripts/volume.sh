@@ -9,7 +9,7 @@ renice -n -20 -p $pid
 vol=5
 movemousefast() {
 	if [[ $x -ne 0 && $y -ne 0 ]]; then
-		for ((i = 0; i < 100; i++)); do
+		for ((i = 0; i < 50; i++)); do
 			xdotool mousemove 0 0
 			xdotool mousemove $1 $2 &
 		done

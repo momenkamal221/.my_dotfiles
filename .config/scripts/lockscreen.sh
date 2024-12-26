@@ -1,5 +1,8 @@
 #!/bin/bash
 # https://github.com/dracula/i3lock-color?tab=readme-ov-file
+
+setxkbmap "us"
+
 alpha='dd'
 background='#282a36'
 selection='#44475a'

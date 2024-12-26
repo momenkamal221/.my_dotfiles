@@ -1,0 +1,2 @@
+[2024-12-26 18:01:12] in_progress {"task_name": "Bash", "message": "Running the script:  - rpm-fusion", "comment": ""}
+[2024-12-26 18:01:15] success {"task_name": "Bash", "message": "Script has run:  - rpm-fusion", "comment": ""}

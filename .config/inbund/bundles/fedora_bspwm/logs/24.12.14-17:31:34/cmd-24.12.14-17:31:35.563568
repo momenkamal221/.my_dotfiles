@@ -1,0 +1,2 @@
+>>> stow --adopt -d ~/.my_dotfiles -t ~/ .
+None

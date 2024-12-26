@@ -99,13 +99,23 @@ POWERLEVEL9K_CUSTOM_FEDORA_ICON="echo -e ''"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
 POWERLEVEL9K_SHORTEN_DELIMITER='~'
-
 # ZSH_THEME="powerlevel9k/powerlevel9k"
 ZSH_THEME=powerlevel10k/powerlevel10k
 POWERLEVEL9K_MODE="nerdfont-complete"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_fedora_icon user dir_writable dir vcs status)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_virtualenv custom_fedora_icon user dir_writable dir vcs status)
+#os_icon or custom_fedora_icon i got
+
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+
+
+POWERLEVEL9K_CUSTOM_VIRTUALENV="prompt_virtualenv"
+# Function to get the virtual environment name
+function prompt_virtualenv() {
+  if [[ -n "$VIRTUAL_ENV" ]]; then
+    echo -n "%{$fg[black]%}($(basename $VIRTUAL_ENV))%{$reset_color%}"
+  fi
+}
 
 # User configuration
 
@@ -141,3 +151,20 @@ source ~/.my_aliases
 
 autoload -U compinit
 compinit
+
+uptime -p
+
+# echo "Ctrl + A: Move to the beginning of the line."
+# echo "Ctrl + E: Move to the end of the line."
+# echo "Ctrl + U: Delete from the cursor to the beginning of the line."
+# echo "Ctrl + K: Delete from the cursor to the end of the line."
+# echo "Ctrl + W: Delete the word before the cursor."
+
+# echo "Alt + B: Move backward by one word."
+# echo "Alt + F: Move forward by one word."
+
+# echo "Ctrl + L: Clear the terminal screen (same as typing clear)."
+# echo "Ctrl + C: Cancel the current command."
+# echo "Ctrl + Z: Suspend the current process."
+
+

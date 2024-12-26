@@ -1,0 +1,66 @@
+[2024-12-14 17:31:35] success {"task_name": "Install", "message": "stow: Already installed.", "comment": ""}
+[2024-12-14 17:31:35] error {"task_name": "cmd", "message": "stow --adopt -d ~/.my_dotfiles -t ~/ .: Failed to execute.", "comment": ""}
+[2024-12-14 17:31:35] success {"task_name": "Install", "message": "sddm: Already installed.", "comment": ""}
+[2024-12-14 17:31:36] success {"task_name": "Install", "message": "materia-kde-sddm: Already installed.", "comment": ""}
+[2024-12-14 17:31:36] success {"task_name": "Install", "message": "qt5-qtgraphicaleffects: Already installed.", "comment": ""}
+[2024-12-14 17:31:37] success {"task_name": "Install", "message": "qt5-qtquickcontrols2: Already installed.", "comment": ""}
+[2024-12-14 17:31:37] success {"task_name": "Install", "message": "qt5-qtsvg: Already installed.", "comment": ""}
+[2024-12-14 17:31:37] success {"task_name": "Install", "message": "bspwm: Already installed.", "comment": ""}
+[2024-12-14 17:31:38] success {"task_name": "Install", "message": "wmctrl: Already installed.", "comment": ""}
+[2024-12-14 17:31:38] success {"task_name": "Install", "message": "i3lock: Already installed.", "comment": ""}
+[2024-12-14 17:31:38] success {"task_name": "Install", "message": "xset: Already installed.", "comment": ""}
+[2024-12-14 17:31:39] success {"task_name": "Install", "message": "xautolock: Already installed.", "comment": ""}
+[2024-12-14 17:31:39] success {"task_name": "Install", "message": "xhost: Already installed.", "comment": ""}
+[2024-12-14 17:31:40] success {"task_name": "Install", "message": "numlockx: Already installed.", "comment": ""}
+[2024-12-14 17:31:40] success {"task_name": "Install", "message": "sxhkd: Already installed.", "comment": ""}
+[2024-12-14 17:31:40] success {"task_name": "Install", "message": "xfce4-panel: Already installed.", "comment": ""}
+[2024-12-14 17:31:41] success {"task_name": "Install", "message": "xfce4-notifyd: Already installed.", "comment": ""}
+[2024-12-14 17:31:41] success {"task_name": "Install", "message": "xfce4-xkb-plugin: Already installed.", "comment": ""}
+[2024-12-14 17:31:42] success {"task_name": "cmd", "message": " dnf search cut: Executed successfully.", "comment": ""}
+[2024-12-14 17:31:43] success {"task_name": "Install", "message": "dmenu: Already installed.", "comment": ""}
+[2024-12-14 17:31:43] success {"task_name": "Install", "message": "picom: Already installed.", "comment": ""}
+[2024-12-14 17:31:44] success {"task_name": "Install", "message": "feh: Already installed.", "comment": ""}
+[2024-12-14 17:31:44] success {"task_name": "Install", "message": "xsetroot: Already installed.", "comment": ""}
+[2024-12-14 17:31:44] success {"task_name": "Install", "message": "alsa-utils: Already installed.", "comment": ""}
+[2024-12-14 17:31:45] success {"task_name": "Install", "message": "alsa-lib: Already installed.", "comment": ""}
+[2024-12-14 17:31:45] success {"task_name": "Install", "message": "pulseaudio-utils: Already installed.", "comment": ""}
+[2024-12-14 17:31:45] success {"task_name": "Install", "message": "pavucontrol: Already installed.", "comment": ""}
+[2024-12-14 17:31:46] success {"task_name": "Install", "message": "polkit-gnome: Already installed.", "comment": ""}
+[2024-12-14 17:31:46] success {"task_name": "Install", "message": "gnome-keyring: Already installed.", "comment": ""}
+[2024-12-14 17:31:47] success {"task_name": "Install", "message": "playerctl: Already installed.", "comment": ""}
+[2024-12-14 17:31:47] success {"task_name": "Install", "message": "xdotool: Already installed.", "comment": ""}
+[2024-12-14 17:31:47] success {"task_name": "Install", "message": "zsh: Already installed.", "comment": ""}
+[2024-12-14 17:31:48] success {"task_name": "Install", "message": "flatpak: Already installed.", "comment": ""}
+[2024-12-14 17:31:48] success {"task_name": "Install", "message": "adwaita-qt5: Already installed.", "comment": ""}
+[2024-12-14 17:31:48] success {"task_name": "Install", "message": "adwaita-qt6: Already installed.", "comment": ""}
+[2024-12-14 17:31:49] success {"task_name": "Install", "message": "arc-theme: Already installed.", "comment": ""}
+[2024-12-14 17:31:49] success {"task_name": "Install", "message": "materia-kde: Already installed.", "comment": ""}
+[2024-12-14 17:31:50] success {"task_name": "Install", "message": "materia-gtk-theme: Already installed.", "comment": ""}
+[2024-12-14 17:31:50] success {"task_name": "Install", "message": "breeze-cursor-theme: Already installed.", "comment": ""}
+[2024-12-14 17:31:50] success {"task_name": "Install", "message": "papirus-icon-theme: Already installed.", "comment": ""}
+[2024-12-14 17:31:52] error {"task_name": "Install", "message": "oxygen-cursor-theme: Is not available.", "comment": ""}
+[2024-12-14 17:31:52] success {"task_name": "Install", "message": "lxappearance: Already installed.", "comment": ""}
+[2024-12-14 17:31:53] success {"task_name": "Install", "message": "qt5ct: Already installed.", "comment": ""}
+[2024-12-14 17:31:53] success {"task_name": "Install", "message": "kvantum: Already installed.", "comment": ""}
+[2024-12-14 17:31:53] success {"task_name": "Install", "message": "plymouth: Already installed.", "comment": ""}
+[2024-12-14 17:31:54] success {"task_name": "Install", "message": "plymouth-core-libs: Already installed.", "comment": ""}
+[2024-12-14 17:31:54] success {"task_name": "Install", "message": "plymouth-devel: Already installed.", "comment": ""}
+[2024-12-14 17:31:55] success {"task_name": "Install", "message": "plymouth-graphics-libs: Already installed.", "comment": ""}
+[2024-12-14 17:31:55] success {"task_name": "Install", "message": "plymouth-kcm: Already installed.", "comment": ""}
+[2024-12-14 17:31:55] success {"task_name": "Install", "message": "plymouth-plugin-fade-throbber: Already installed.", "comment": ""}
+[2024-12-14 17:31:56] success {"task_name": "Install", "message": "plymouth-plugin-label: Already installed.", "comment": ""}
+[2024-12-14 17:31:56] success {"task_name": "Install", "message": "plymouth-plugin-script: Already installed.", "comment": ""}
+[2024-12-14 17:31:57] success {"task_name": "Install", "message": "plymouth-plugin-space-flares: Already installed.", "comment": ""}
+[2024-12-14 17:31:57] success {"task_name": "Install", "message": "plymouth-plugin-two-step: Already installed.", "comment": ""}
+[2024-12-14 17:31:57] success {"task_name": "Install", "message": "plymouth-scripts: Already installed.", "comment": ""}
+[2024-12-14 17:31:58] success {"task_name": "Install", "message": "plymouth-system-theme: Already installed.", "comment": ""}
+[2024-12-14 17:31:58] success {"task_name": "Install", "message": "plymouth-theme-breeze: Already installed.", "comment": ""}
+[2024-12-14 17:31:58] success {"task_name": "Install", "message": "plymouth-theme-charge: Already installed.", "comment": ""}
+[2024-12-14 17:31:59] success {"task_name": "Install", "message": "plymouth-theme-fade-in: Already installed.", "comment": ""}
+[2024-12-14 17:31:59] success {"task_name": "Install", "message": "plymouth-theme-hot-dog: Already installed.", "comment": ""}
+[2024-12-14 17:32:00] success {"task_name": "Install", "message": "plymouth-theme-script: Already installed.", "comment": ""}
+[2024-12-14 17:32:00] success {"task_name": "Install", "message": "plymouth-theme-solar: Already installed.", "comment": ""}
+[2024-12-14 17:32:00] success {"task_name": "Install", "message": "plymouth-theme-spinfinity: Already installed.", "comment": ""}
+[2024-12-14 17:32:01] success {"task_name": "Install", "message": "plymouth-theme-spinner: Already installed.", "comment": ""}
+[2024-12-14 17:32:01] success {"task_name": "cmd", "message": "sudo plymouth-set-default-theme bgrt: Executed successfully.", "comment": ""}
+[2024-12-14 17:32:14] success {"task_name": "cmd", "message": "sudo dracut -f: Executed successfully.", "comment": ""}

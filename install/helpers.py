@@ -13,7 +13,7 @@ current_path = os.path.dirname(os.path.realpath(__file__))
 log_file_name=f"{datetime.datetime.now().strftime('%y.%m.%d-%H:%M:%S')}.log"
 log_file_dir=f"{current_path}/logs"
 log_file_path=f"{log_file_dir}/{log_file_name}"
-manager_dir=f"{current_path}/manager"
+bundles_dir=f"{current_path}/bundles"
 if not os.path.exists(log_file_dir):
     os.makedirs(log_file_dir)
 execute_command(f"touch {log_file_path}")
@@ -21,6 +21,14 @@ execute_command(f"touch {log_file_path}")
 def run_bash_script(bash_script_path):
     subprocess.run(['bash', bash_script_path])
 
+"""
+get bundles
+install bundles
+"""
+
+
+def install_bundle(bundle):
+    pass
 def get_names(file_path):
     result = []
     commandPrefix=">>>"
@@ -28,14 +36,12 @@ def get_names(file_path):
         with open(file_path, 'r') as file:
             for line in file:
                 # Exclude lines starting with #
-                if line.startswith(commandPrefix):
-                    execute_command(line[len(commandPrefix):].strip())
-                    continue
-                    
                 if not line.strip().startswith('#'):
                     # Remove comments at the end of the line
                     line_without_comment = line.split('#')[0].strip()
-
+                    if line.startswith(commandPrefix):
+                        result.append(line_without_comment)
+                        continue
                     # Split the line based on spaces and tabs
                     elements = line_without_comment.split()
 
@@ -48,10 +54,11 @@ def get_names(file_path):
         print(f"File not found: {file_path}")
     return result
 
+
+
 def remove_packages(*packages):
     remove_packages_log=Log('remove',log_file_path)
     for package in packages:
-        remove_packages_log.task_started(f'{package}: removeing...')
         # Check if the package is already removed
         if not dnf.is_installed(package):
             remove_packages_log.task_finished()
@@ -65,6 +72,8 @@ def remove_packages(*packages):
             remove_packages_log.send(f'{package}: successfully removed',"success")
         else:
             remove_packages_log.send(f'{package}: failed to remove',"error")
+
+
 
 def install_packages(*packages):
     for package in packages:
@@ -88,6 +97,7 @@ def install_packages(*packages):
             install_log.send(f'{package}: successfully installed',"success")
         else:
             install_log.send(f'{package}: failed to install',"error")
+
 def flatpak_install(*apps):
     flatpak_install_log=Log('flatpak install',log_file_path)
     for app in apps:

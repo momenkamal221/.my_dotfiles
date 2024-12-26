@@ -5,8 +5,8 @@
     "grab-mouse-pointer": true,
     "hotkey-show-app": "<Primary><Alt>p",
     "render-on-screen": "mouse-pointer-monitor",
-    "show-indicator-icon": false,
+    "show-indicator-icon": true,
     "show-recent-apps": "0",
     "terminal-command": "",
-    "theme-name": "adwaita"
+    "theme-name": "Qogir-ulauncher-theme"
 }

@@ -1,0 +1,86 @@
+#!/bin/bash
+
+stow
+>>>stow --adopt -d ~/.my_dotfiles -t ~/ .
+
+#sddm
+sddm
+materia-kde-sddm qt5-qtgraphicaleffects qt5-qtquickcontrols2 qt5-qtsvg #these for sddm theme
+
+bspwm
+wmctrl
+i3lock 
+xset
+xautolock
+xhost
+numlockx #to control the numlock key
+sxhkd
+# trayer # changed with a new tray in polybar
+# polybar
+
+xfce4-panel
+xfce4-notifyd
+xfce4-xkb-plugin
+
+konsole5
+
+nemo
+>>> xdg-mime default nemo.desktop inode/directory
+>>> gsettings set org.cinnamon.desktop.default-applications.terminal exec gnome-shell
+
+dmenu
+picom
+feh
+xsetroot #the command that apply cursor theme in bspwmrc
+# nitrogen
+alsa-utils
+alsa-lib
+pulseaudio-utils
+pavucontrol
+polkit-gnome
+gnome-keyring
+playerctl
+xdotool
+zsh
+flatpak
+
+#themes
+adwaita-qt5
+adwaita-qt6
+arc-theme
+materia-kde
+materia-gtk-theme
+breeze-cursor-theme
+papirus-icon-theme
+oxygen-cursor-theme
+lxappearance
+qt5ct
+kvantum
+# #themes end
+
+plymouth
+plymouth-core-libs
+plymouth-devel
+plymouth-graphics-libs
+plymouth-kcm
+plymouth-plugin-fade-throbber
+plymouth-plugin-label
+plymouth-plugin-script
+plymouth-plugin-space-flares
+plymouth-plugin-two-step
+plymouth-scripts
+plymouth-system-theme
+plymouth-theme-breeze
+plymouth-theme-charge
+plymouth-theme-fade-in
+plymouth-theme-hot-dog
+plymouth-theme-script
+plymouth-theme-solar
+plymouth-theme-spinfinity
+plymouth-theme-spinner
+
+# Update Plymouth theme
+>>>sudo plymouth-set-default-theme bgrt
+# Regenerate needed files (e.g. initramfs)
+>>>sudo dracut -f
+

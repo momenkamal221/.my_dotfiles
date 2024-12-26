@@ -29,34 +29,54 @@
         "run_without_argument": false,
         "added": 1705434415.7920415
     },
-    "3c0c96a1-8372-40f3-828d-f4fd5f4b6cee": {
-        "id": "3c0c96a1-8372-40f3-828d-f4fd5f4b6cee",
-        "name": "logout",
-        "keyword": "logout",
-        "cmd": "killall bspwm",
-        "icon": "~/.icons/logout.png",
-        "is_default_search": false,
-        "run_without_argument": true,
-        "added": 1705547086.947858
-    },
     "3de4de64-15c6-42a9-8fbd-14c50f1e5445": {
         "id": "3de4de64-15c6-42a9-8fbd-14c50f1e5445",
         "name": "shutdown",
         "keyword": "shutdown",
         "cmd": "systemctl poweroff",
-        "icon": "~/.icons/shutdown.png",
+        "icon": "~/.config/ulauncher/icons/shutdown.png",
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1705547124.0621197
     },
     "d759416c-7b02-47c9-bf5b-f185ded2e752": {
         "id": "d759416c-7b02-47c9-bf5b-f185ded2e752",
-        "name": "reboot",
-        "keyword": "reboot",
+        "name": "Reboot",
+        "keyword": "Reboot",
         "cmd": "systemctl reboot",
-        "icon": "~/.icons/reboot.png",
+        "icon": "~/.config/ulauncher/icons/reboot.png",
         "is_default_search": false,
         "run_without_argument": true,
         "added": 1705547618.903352
+    },
+    "70120cbf-6b9e-4ff3-9497-b09157880baa": {
+        "id": "70120cbf-6b9e-4ff3-9497-b09157880baa",
+        "name": "Logout",
+        "keyword": "Logout",
+        "cmd": "bspc quit",
+        "icon": "~/.config/ulauncher/icons/logout.png",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1734211335.092028
+    },
+    "a3bc5553-142b-469c-984d-3d445a947b7b": {
+        "id": "a3bc5553-142b-469c-984d-3d445a947b7b",
+        "name": "Chatgpt",
+        "keyword": "gpt",
+        "cmd": "https://chat.openai.com/?q=%s",
+        "icon": "~/.config/ulauncher/icons/chatgpt.png",
+        "is_default_search": false,
+        "run_without_argument": false,
+        "added": 1734218238.4059093
+    },
+    "9c4ddfdb-e3b2-4065-badd-481e35aceff3": {
+        "id": "9c4ddfdb-e3b2-4065-badd-481e35aceff3",
+        "name": "Bing",
+        "keyword": "bing",
+        "cmd": "https://www.bing.com/search?q=%s\n",
+        "icon": "~/.config/ulauncher/icons/Bing_Logo.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1734218423.2309058
     }
 }

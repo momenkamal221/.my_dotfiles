@@ -1,1 +1,30 @@
-{}
+{
+    "com.github.ikorjefocur.ulauncher-commandrunner": {
+        "id": "com.github.ikorjefocur.ulauncher-commandrunner",
+        "url": "https://github.com/IkorJefocur/ulauncher-commandrunner",
+        "updated_at": "2024-12-14T19:11:50.276183",
+        "last_commit": "c306301468cbaba23625bf0ef0639b7ad6602783",
+        "last_commit_time": "2022-03-01T19:34:35"
+    },
+    "com.github.brpaz.ulauncher-vscode-projects": {
+        "id": "com.github.brpaz.ulauncher-vscode-projects",
+        "url": "https://github.com/brpaz/ulauncher-vscode-projects",
+        "updated_at": "2024-12-14T19:28:50.248169",
+        "last_commit": "6ba448b240af19568a3750dc5b7e550cdb1e954d",
+        "last_commit_time": "2022-06-15T14:19:48"
+    },
+    "com.github.fisadev.ulauncher-better-file-browser": {
+        "id": "com.github.fisadev.ulauncher-better-file-browser",
+        "url": "https://github.com/fisadev/ulauncher-better-file-browser",
+        "updated_at": "2024-12-14T19:34:28.128144",
+        "last_commit": "8ec8a0dda09e172de62051cd1f251816ce4af368",
+        "last_commit_time": "2019-09-06T19:20:09"
+    },
+    "com.github.devkleber.ulauncher-open-link": {
+        "id": "com.github.devkleber.ulauncher-open-link",
+        "url": "https://github.com/DevKleber/ulauncher-open-link",
+        "updated_at": "2024-12-14T20:46:29.156695",
+        "last_commit": "de9b7e6144d974c06a7f218596a2db80b667fd5b",
+        "last_commit_time": "2023-12-29T17:33:50"
+    }
+}

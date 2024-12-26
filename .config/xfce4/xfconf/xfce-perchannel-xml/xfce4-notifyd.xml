@@ -14,12 +14,15 @@
   <property name="expire-timeout-enabled" type="bool" value="true"/>
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
+      <value type="string" value="brave-browser"/>
       <value type="string" value="com.discordapp.Discord"/>
       <value type="string" value="com.github.hluk.copyq"/>
       <value type="string" value="com.spotify.Client"/>
       <value type="string" value="hp-systray"/>
       <value type="string" value="notify-send"/>
+      <value type="string" value="org.gnome.Epiphany"/>
       <value type="string" value="org.gnome.Software"/>
+      <value type="string" value="org.kde.konsole"/>
       <value type="string" value="vlc"/>
       <value type="string" value="Xfce volume control"/>
       <value type="string" value="Xfce4-notifyd settings"/>

@@ -1,6 +1,3 @@
-import time
 import helpers
-import os
-import datetime
-
-helpers.refresh_dnf()
+from pprint import pprint
+pprint(helpers.get_names("./bundles/dnf"))

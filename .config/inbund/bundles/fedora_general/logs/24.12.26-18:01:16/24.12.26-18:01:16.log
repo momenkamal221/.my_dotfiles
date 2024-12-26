@@ -1,0 +1,62 @@
+[2024-12-26 18:01:17] in_progress {"task_name": "Bash", "message": "Running the script: external - rpm-fusion", "comment": ""}
+[2024-12-26 18:01:25] success {"task_name": "Bash", "message": "Script has run: external - rpm-fusion", "comment": ""}
+[2024-12-26 18:04:20] success {"task_name": "Install", "message": "seahorse: Already installed.", "comment": ""}
+[2024-12-26 18:04:21] success {"task_name": "Install", "message": "langpacks-ar: Already installed.", "comment": ""}
+[2024-12-26 18:04:21] success {"task_name": "Install", "message": "timeshift: Already installed.", "comment": ""}
+[2024-12-26 18:04:22] success {"task_name": "Install", "message": "ntpsec: Already installed.", "comment": ""}
+[2024-12-26 18:04:22] success {"task_name": "Install", "message": "dunst: Already installed.", "comment": ""}
+[2024-12-26 18:04:22] success {"task_name": "Install", "message": "gnome-software: Already installed.", "comment": ""}
+[2024-12-26 18:04:23] success {"task_name": "Install", "message": "dolphin: Already installed.", "comment": ""}
+[2024-12-26 18:04:23] success {"task_name": "Install", "message": "ark: Already installed.", "comment": ""}
+[2024-12-26 18:04:24] success {"task_name": "Install", "message": "flameshot: Already installed.", "comment": ""}
+[2024-12-26 18:04:24] success {"task_name": "Install", "message": "kwrite: Already installed.", "comment": ""}
+[2024-12-26 18:04:24] success {"task_name": "Install", "message": "python3-devel: Already installed.", "comment": ""}
+[2024-12-26 18:04:25] success {"task_name": "Install", "message": "gcc: Already installed.", "comment": ""}
+[2024-12-26 18:04:26] error {"task_name": "Install", "message": "pytest: Is not available.", "comment": ""}
+[2024-12-26 18:04:27] success {"task_name": "Install", "message": "easyeffects: Already installed.", "comment": ""}
+[2024-12-26 18:04:27] success {"task_name": "Install", "message": "bleachbit: Already installed.", "comment": ""}
+[2024-12-26 18:04:28] success {"task_name": "Install", "message": "copyq: Already installed.", "comment": ""}
+[2024-12-26 18:04:28] success {"task_name": "Install", "message": "git: Already installed.", "comment": ""}
+[2024-12-26 18:04:29] success {"task_name": "Install", "message": "neofetch: Already installed.", "comment": ""}
+[2024-12-26 18:04:29] success {"task_name": "Install", "message": "vlc: Already installed.", "comment": ""}
+[2024-12-26 18:04:29] success {"task_name": "Install", "message": "mpv: Already installed.", "comment": ""}
+[2024-12-26 18:04:30] success {"task_name": "Install", "message": "qbittorrent: Already installed.", "comment": ""}
+[2024-12-26 18:04:30] success {"task_name": "Install", "message": "thunderbird: Already installed.", "comment": ""}
+[2024-12-26 18:04:31] success {"task_name": "Install", "message": "ulauncher: Already installed.", "comment": ""}
+[2024-12-26 18:04:31] success {"task_name": "Install", "message": "gimp: Already installed.", "comment": ""}
+[2024-12-26 18:04:31] success {"task_name": "Install", "message": "inkscape: Already installed.", "comment": ""}
+[2024-12-26 18:04:32] success {"task_name": "Install", "message": "krita: Already installed.", "comment": ""}
+[2024-12-26 18:04:32] success {"task_name": "Install", "message": "shotwell: Already installed.", "comment": ""}
+[2024-12-26 18:04:33] success {"task_name": "Install", "message": "qalculate-gtk: Already installed.", "comment": ""}
+[2024-12-26 18:04:33] success {"task_name": "Install", "message": "obs-studio: Already installed.", "comment": ""}
+[2024-12-26 18:04:33] success {"task_name": "Install", "message": "gnome-disk-utility: Already installed.", "comment": ""}
+[2024-12-26 18:04:34] success {"task_name": "Install", "message": "sysmontask: Already installed.", "comment": ""}
+[2024-12-26 18:04:34] success {"task_name": "Install", "message": "htop: Already installed.", "comment": ""}
+[2024-12-26 18:04:35] success {"task_name": "Install", "message": "hplip: Already installed.", "comment": ""}
+[2024-12-26 18:04:35] success {"task_name": "Install", "message": "hplip-gui: Already installed.", "comment": ""}
+[2024-12-26 18:04:35] success {"task_name": "Install", "message": "cups: Already installed.", "comment": ""}
+[2024-12-26 18:04:36] success {"task_name": "Install", "message": "trash-cli: Already installed.", "comment": ""}
+[2024-12-26 18:04:36] success {"task_name": "Install", "message": "xournalpp: Already installed.", "comment": ""}
+[2024-12-26 18:04:36] success {"task_name": "Flatpak", "message": "com.bitwarden.desktop: Already installed.", "comment": ""}
+[2024-12-26 18:04:36] success {"task_name": "Flatpak", "message": "com.discordapp.Discord: Already installed.", "comment": ""}
+[2024-12-26 18:04:36] success {"task_name": "Flatpak", "message": "net.cozic.joplin_desktop: Already installed.", "comment": ""}
+[2024-12-26 18:04:36] success {"task_name": "Flatpak", "message": "com.spotify.Client: Already installed.", "comment": ""}
+[2024-12-26 18:04:36] success {"task_name": "Flatpak", "message": "io.github.flattool.Warehouse: Already installed.", "comment": ""}
+[2024-12-26 18:04:36] success {"task_name": "Flatpak", "message": "com.github.tchx84.Flatseal: Already installed.", "comment": ""}
+[2024-12-26 18:04:36] success {"task_name": "Flatpak", "message": "org.onlyoffice.desktopeditors: Already installed.", "comment": ""}
+[2024-12-26 18:04:36] success {"task_name": "Flatpak", "message": "org.kryogenix.Pick: Already installed.", "comment": ""}
+[2024-12-26 18:04:36] success {"task_name": "Flatpak", "message": "io.missioncenter.MissionCenter: Already installed.", "comment": ""}
+[2024-12-26 18:04:36] success {"task_name": "Flatpak", "message": "io.github.prateekmedia.appimagepool: Already installed.", "comment": ""}
+[2024-12-26 18:04:36] in_progress {"task_name": "Bash", "message": "Running the script: external - brave", "comment": ""}
+[2024-12-26 18:04:42] success {"task_name": "Bash", "message": "Script has run: external - brave", "comment": ""}
+[2024-12-26 18:04:42] in_progress {"task_name": "Bash", "message": "Running the script: external - code", "comment": ""}
+[2024-12-26 18:04:46] success {"task_name": "Bash", "message": "Script has run: external - code", "comment": ""}
+[2024-12-26 18:04:46] in_progress {"task_name": "Bash", "message": "Running the script: external - codecs", "comment": ""}
+[2024-12-26 18:05:01] success {"task_name": "Bash", "message": "Script has run: external - codecs", "comment": ""}
+[2024-12-26 18:05:01] in_progress {"task_name": "Bash", "message": "Running the script: external - microsoft-fonts", "comment": ""}
+[2024-12-26 18:05:10] success {"task_name": "Bash", "message": "Script has run: external - microsoft-fonts", "comment": ""}
+[2024-12-26 18:05:10] error {"task_name": "Bash", "message": "Script has run:  bsp-layout is not found", "comment": ""}
+[2024-12-26 18:05:10] in_progress {"task_name": "Bash", "message": "Running the script: external - nvidia-drivers", "comment": ""}
+[2024-12-26 18:05:15] success {"task_name": "Bash", "message": "Script has run: external - nvidia-drivers", "comment": ""}
+[2024-12-26 18:05:15] in_progress {"task_name": "Bash", "message": "Running the script: external - system", "comment": ""}
+[2024-12-26 18:05:16] success {"task_name": "Bash", "message": "Script has run: external - system", "comment": ""}

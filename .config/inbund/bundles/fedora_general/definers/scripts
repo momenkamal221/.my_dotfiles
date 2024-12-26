@@ -1,0 +1,9 @@
+#!/bin/bash
+brave
+code
+codecs
+microsoft-fonts
+bsp-layout
+nvidia-drivers #this one has to be done after installing rpm fusion 
+
+system #system and settings

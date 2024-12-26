@@ -1,5 +1,8 @@
 #!/bin/bash
 
+  
+ 
+         
 stow
 >>>stow --adopt -d ~/.my_dotfiles -t ~/ .
 #sddm
@@ -91,6 +94,7 @@ ark #archive manager work well with dolphin
 flameshot
 kwrite
 python3-devel gcc #to install pynput
+pytest
 easyeffects
 bleachbit
 copyq

@@ -1,33 +1,13 @@
-#
+# https://github.com/baskerville/sxhkd/blob/b0923b6b3d5d85b1ff80a5bb286934b8721a7c08/src/parse.c#L49
 # wm independent hotkeys
 #
-#====apps====
-# terminal emulator
-
-super + Return
-	konsole
-# file manager
-super + e
-	dolphin
-# launcher
-super + r
-	$scripts/toggle_ulauncher.sh
-
-# program launcher
-super + @space
-	dmenu_run
-
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
-
 #
 # bspwm hotkeys
 #
 
 # quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r}
+# super + alt + {q,r}
+# 	bspc {quit,wm -r}
 
 # close and kill
 super + w
@@ -55,22 +35,29 @@ super + g
 
 # set the window state
 super + shift + t
-	bspc node -t pseudo_tiled
+	if [ -z "$(bspc query -N -n focused.pseudo_tiled)" ]; then \
+		bspc node -s east ;\
+		bspc node -t pseudo_tiled ;\
+	else \
+		bspc node focused -t tiled ;\
+	fi
+	
 # Toggle floating
 super + t
-    if [ -z "$(bspc query -N -n focused.floating)" ]; then \
-				bspc node -s east; \
-        bspc node focused -t floating; \
-    else \
-        bspc node focused -t tiled; \
-    fi
-set the window state
+	if [ -z "$(bspc query -N -n focused.floating)" ]; then \
+		bspc node -s east ;\
+		bspc node focused -t floating ;\
+	else \
+		bspc node focused -t tiled ;\
+	fi
+
+# set the window state
 
 super + f
-  bspc node -t \~fullscreen
+	bspc node -t \~fullscreen
 
 # set the node flags
-super + ctrl + {m,x,y,z}
+super + alt + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private} #locked-> cant be closed;sticky-> follow the active workspace;
 
 #
@@ -79,7 +66,9 @@ super + ctrl + {m,x,y,z}
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+	bspc config pointer_follows_focus true ;\
+	bspc node -{f,s} {west,south,north,east} ;\
+	bspc config pointer_follows_focus false
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
@@ -90,40 +79,51 @@ super + {p,b,comma,period}
 # 	bspc node -f {next,prev}.local.!hidden.window
 #to conceal or hide a window
 
-
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
-
 # focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+super + {i,o}
+	bspc wm -h off ;\
+	bspc node {older,newer} -f ;\
+	bspc wm -h on 
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9}
+super + {_,shift }{1-9}
 	bspc {desktop -f,node -d} '^{1-9}' --follow
+
+# # Focus desktop 1-9
+# super + {1-9}
+#     bspc desktop -f {1-9}
+
+# # Move node to desktop 1-9
+# super + shift + {1-9}
+#     bspc node -d {1-9}
+
+# # Move node to desktop 1-9 and switch to that desktop
+# super + shift + alt + {1-9}
+#     bspc node -d {1-9} --follow
+
 #for desktop '`' which i use as a way to hide windows
 super + c
 	bspc node -d '^10'
-super  + {_,shift + } grave
+super + {_,shift + } grave
 	bspc {desktop -f,node -d} '^10'
 #
 # preselect
 #
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
+super + alt + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
-super + ctrl + {1-9}
+super + alt + {1-9}
 	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-super + s
+super + alt + s
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
@@ -135,12 +135,12 @@ super + alt + shift + space
 #
 
 # expand a window by moving one of its side outward
-super + ctrl + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+# super + ctrl + {h,j,k,l}
+# 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
-super + ctrl + shift + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+# super + ctrl + shift + {h,j,k,l}
+# 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
 super + {Left,Down,Up,Right}
@@ -160,20 +160,48 @@ super + shift + m
 	bspc node -s east
 super + m
 	kdocker
-	# bspc node -g hidden=off
+# bspc node -g hidden=off
+
+#===caps===
+# Caps_Lock
+# 	$scripts/caps-block.sh
+super + Caps_Lock
+	$scripts/toggle_caps_lock.sh
+shift + Caps_Lock
+	$scripts/layout-switch.sh
+
+#====apps====
+# terminal emulator
+
+super + Return
+	konsole
+# file manager
+super + e
+	nemo
+# launcher
+super + r
+	$scripts/toggle_ulauncher.sh
+
+# program launcher
+# super + @space
+# 	dmenu_run
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
 
 Print
 	flameshot full -c
 
 super + Tab
 	$bspwm_configs/next_occupied_desktop.sh
-super + d
-  $bspwm_configs/frame_decorations.sh toggle
+super + ctrl + d
+	$bspwm_configs/frame_decorations.sh toggle
 
 alt + button4
-	 $scripts/volume.sh up
+	$scripts/volume.sh up
 alt + button5
-	 $scripts/volume.sh down
+	$scripts/volume.sh down
 
 alt + button2
 	$scripts/toggle_mute.sh
@@ -187,3 +215,5 @@ super + a
 super + shift + a
 	$scripts/scrolling.sh 0
 
+super + backslash
+	$scripts/toggle_picom.sh

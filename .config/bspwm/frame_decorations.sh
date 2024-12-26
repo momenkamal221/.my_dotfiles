@@ -2,11 +2,14 @@
 
 source .glob-vars.sh
 
+border_gap_on=5
+border_gap_off=1
+
 # Function to turn on frame decorations
 frame_decorations_on() {
     bspc config border_width 2
     picom-config corner-radius 10
-    bspc config window_gap 5
+    bspc config window_gap $border_gap_on
     bspwm_frame_decoration=1
 }
 
@@ -14,7 +17,7 @@ frame_decorations_on() {
 frame_decorations_off() {
     bspc config border_width 2
     picom-config corner-radius 0
-    bspc config window_gap 0
+    bspc config window_gap $border_gap_off
     bspwm_frame_decoration=0
 }
 

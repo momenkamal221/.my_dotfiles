@@ -14,7 +14,7 @@ from helpers import (
     update_system,
     copy_file,
     remove_packages,
-    manager_dir
+    bundles_dir
 )
 
 # # making sure script is running with sudo
@@ -51,12 +51,12 @@ refresh_dnf()
 ###
 update_system()
 ###
-install_packages(*get_names(f"{manager_dir}/dnf"))
+install_packages(*get_names(f"{bundles_dir}/dnf"))
 ###
-run_scripts(*get_names(f"{manager_dir}/scripts"))
+run_scripts(*get_names(f"{bundles_dir}/scripts"))
 ###
 run_scripts("flatpak")
-flatpak_install(*get_names(f"{manager_dir}/flatpak"))
+flatpak_install(*get_names(f"{bundles_dir}/flatpak"))
 ###======================settings=============================
 #mouse acc
 copy_file(
